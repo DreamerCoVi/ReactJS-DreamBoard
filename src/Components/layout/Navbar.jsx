@@ -10,6 +10,7 @@ const Navbar = () => {
             <div className="container">
                 <Link to='/' className="brand-logo">Dreamboard</Link>
                 <SignedInLinks />
+                <SignedOutLinks />
             </div>
         </nav>
     )
