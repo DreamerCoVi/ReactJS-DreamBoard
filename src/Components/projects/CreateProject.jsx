@@ -19,6 +19,7 @@ class CreateProject extends Component {
      handleSubmit = (e) => {
         e.preventDefault(); // to prevent a page reload
         this.props.createProject(this.state);
+        this.props.history.push('/');
     }
 
     render() { 
