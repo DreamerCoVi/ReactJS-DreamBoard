@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectSummary from './ProjectSummary';
+import {NavLink} from 'react-router-dom';
 
 
 const ProjectList = ({projects}) => {
@@ -8,7 +9,9 @@ const ProjectList = ({projects}) => {
         <div className="project-list section">
             {projects && projects.map(project => {
                 return (
-                    <ProjectSummary project={project} key={project.id}/>
+                    <NavLink to={`/project/${project.id}`} key={project.id} >
+                        <ProjectSummary project={project} />
+                    </NavLink>
                 )
             })}
         </div>
